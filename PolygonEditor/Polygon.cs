@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using static System.Math;
 using System.Windows.Forms;
-using Grafika_Komputerowa_1_ver1.Properties;
+using PolygonEditor.Properties;
 using System.Diagnostics;
 
 namespace Grafika_Komputerowa_1_ver1
