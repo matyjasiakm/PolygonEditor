@@ -1,0 +1,62 @@
+Edytor Wielok¹tów- Mateusz Matyjasiak
+-------------------------------------
+Przesuwanie oraz edycja wiercho³ków/krawêdzi dostepna jest tylko 
+wtedy kiedy wielok¹t jest zamkniêty.
+Klawiszologia:
+
+Jesli obszar roboczy jest pusty to rysowanie odbywa sie poprzez klikanie myszk¹ przez
+co dodawane s¹ punkty do wielok¹ta. Rysowanie jest koñczone kiedy jest wiecej niz dwa
+wiercho³ki i klikniêty zosta³ pierwszy dodany wiercho³ek (przez co wielok¹t sie zamyka).
+
+Przesuwanie wiercho³ka-klikniêcie i przytrzymanie lewego klawisza myszy i przesuwanie nim.
+Puszczenie przycisku zatwierdza po³o¿enie wierzcho³ka.
+
+W lewym górnym rogu znajduj¹ si¹ opcje wyboru rysowania lini.
+W prawym górnym rogu wyœwietlane s¹ informacje o zaznaczonym wiercho³ku/krawedzi.
+-Przycisk Refresh- odœwieza malowanie wielok¹ta przez co zmiany 
+wyboru rysowania lini bêd¹ widoczne. Przemalowuje obszar na nowo.
+-Przycisk Clear- Czyœci obszar do malowania wielok¹tu.
+-Przycisk Draw Default- rysuje predefiniowany wielok¹t z ograniczeniami.
+
+Prawy przycisk myszy na wiercho³ku wyswietla dostapne opcje(oraz podswietla wiercho³ek):
+-Usuwanie wiercho³ka
+-Ustawienie k¹t w wiercho³ku(jesli k¹t jest ustawiony to opcja jest zaznaczona. klikniêcie
+zaznaczonej opcji powoduje usuniêcie ograniczenia).
+opcje sa dostepne o ile sa zachowane relacje m.in. dla usuwana to wiêcej niz 3 wiercho³ki
+
+Prawy przycisk myszy na krawêdzi wyœwietli dostepne opcje o ile
+pozwalaja na to relacje(bêd¹ wyszarzone):
+-ustawienie krawêdzi pionowej
+-ustawienie krawedzi poziomej
+-dodanie wierzcho³ka
+Dla ograniczen: jesli krawêdz posiada ograniczenie to klikaj¹c prawy widac zaznaczenie przy 
+ograniczeniu. Klikniêcie zaznaczonego ograniczenia usuwa ograniczenie.
+
+-----------------------------------------------------------
+Algorytm
+Przedstawiony przezemnie wielok¹t to zbiór kolejnych punktów w których przechowywana
+jest informacja na temat jakie ograniczenie ma krawêdz nastepna i poprzednia.
+
+Wiercho³ek na potrzeby k¹tów
+posiada informacje czy jest przy tym wiercho³ku ograniczenie ,oraz wspólczynniki kierunkowe
+prostych tworzacych ten k¹t (czyli wspólczynnik prostej przechodzaca przez poprzedni punkt i ten punkt gdzie 
+jest zadany k¹t oraz prostej przechodz¹cej przez ten punkt i nastepny)
+Miara k¹ta dla u³atwienia jest ca³kowita. Jesli podany k¹t rózni sie od tego który by³ pierwotnie to nastêpuje
+wyliczenie nowego.
+Wyiczenie nowego k¹t polega na znalezieniu prostych prostych przecinaj¹cych 
+krawêdz(która jest czeœci¹ k¹ta)pod zadanym k¹tem. Znalezione zostana dwie proste, nastêpnie obliczane sa punkty przeciêcia
+tej prostej z prosta na której leza³ punkt przed zmiana k¹ta(czyli ten k¹t po wyswietleniu)
+Wybór punktu zalezy od tego czy czy punkt tworzy zadany k¹t.
+Sam k¹t obliczany jest z ilorazu wektorowego ¿eby ustaliæ czy k¹t jest powy¿ej 180 wyznaczam otoczke wypuk³¹
+punktów wielok¹ta.te punkty które naleza do otoczki maja mniej niz 180 stopni.
+
+Ustawienie ograniczenie poziomego i pionowego polega na dopasowaniu odpowiednich wspó³rzednych.
+
+Poprawianie wielok¹ta nastepuje od punktu ktory zosta³ zmieniony(od poruszonego).
+Poprawianie nastêpuje z dwóch stron czyli idziemy po liscie punktów w przód i wty³
+Jako ¿e wiercho³ek zwiera informacje o swoim nastepniku i poprzedniku nastepuje poprawa
+wzalezoœci od tego na jaki rodzaj krwedzi poprawiamy.
+Poprawianie konczy sie jesli osi¹gniemy niczym nie ogrniczona krawêd, jesli stanelismy juz na poprawionym elemencie,lub 
+wchodzimy do k¹ta.Jesli poprawiane jest ramie k¹t to wyznaczany jest punkt na nastêpnej prostej która jest do sprawdzenia.
+Jesli poprawiamy ramie k¹tu to w oparciu o wspólczynnik kierunkowy prostej prostych tworzacy dany k¹t.
+
