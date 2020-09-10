@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using PolygonEditor.Properties;
 using System.Diagnostics;
 
-namespace Grafika_Komputerowa_1_ver1
+namespace GK1
 {
 /// <summary>
 /// Klasa polygon to klasa wielokąta.
@@ -186,7 +186,7 @@ namespace Grafika_Komputerowa_1_ver1
         /// Przesuwa podany wierchołek na dany punkt, a następnie od tego wierchołka poprawia wielokat.
         /// Poprawianie wielokąta odbywa sie w dwie strony.
         /// Sprawdzanie odbywa sie w rosnącym kierunku listy wierzchołków i malejacym, dlatego w zalezności od kierunku sa sprawdzane rózne parametry vertex.
-        /// Sprawdzanie konczy sie jesli podany wierchołek zostłą juz poprawiony, podana krawędź nie ma ograniczen lub poprawiona została jedna z 
+        /// Sprawdzanie konczy sie jesli podany wierchołek został już poprawiony, podana krawędź nie ma ograniczen lub poprawiona została jedna z 
         /// prostych przy kącie ale tylko wtedy gdy do niej wchodzimy (Jezeli rozpoczynamy od wierchołka w którym jest kąt wtedy sprawdzanie idzie dalej i nie zatrzymuje sie na ramieniu kąta)
         /// 
         /// </summary>

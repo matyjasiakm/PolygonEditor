@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Grafika_Komputerowa_1_ver1
+namespace GK1
 {
     public partial class AngleWindow : Form
     {

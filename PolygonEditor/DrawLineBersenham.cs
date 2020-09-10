@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Math;
 
-namespace Grafika_Komputerowa_1_ver1
+namespace GK1
 {
     public static class DrawLineBersenham
     {

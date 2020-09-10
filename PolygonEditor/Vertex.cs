@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-namespace Grafika_Komputerowa_1_ver1
+namespace GK1
 {
     ///<summary>
     ///TypeOfEdge okresla typ krawędzi czy jest ona pozioma, pionowa, jest częścią tworzonego kąta lub jest zwyczajna krawedzią bez ograniczenia.

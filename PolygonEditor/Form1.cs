@@ -11,7 +11,7 @@ using System.Diagnostics;
 
 
 
-namespace Grafika_Komputerowa_1_ver1
+namespace GK1
 {
     public partial class Form1 : Form
     {
@@ -343,17 +343,7 @@ namespace Grafika_Komputerowa_1_ver1
                 
             }
             pictureBox1.Refresh();
-        }
-
-        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            //if (e.NewValue == CheckState.Checked && checkedListBox1.CheckedItems.Count > 0)
-            //{
-            //    checkedListBox1.ItemCheck -= checkedListBox1_ItemCheck;
-            //    checkedListBox1.SetItemChecked(checkedListBox1.CheckedIndices[0], false);
-            //    checkedListBox1.ItemCheck += checkedListBox1_ItemCheck;
-            //}
-        }
+        }    
 
         private void button1_Click_1(object sender, EventArgs e)
         {

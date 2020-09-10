@@ -1,4 +1,4 @@
-﻿namespace Grafika_Komputerowa_1_ver1
+﻿namespace GK1
 {
     partial class AngleWindow
     {
