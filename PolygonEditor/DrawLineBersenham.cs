@@ -10,12 +10,12 @@ namespace GK1
 {
     public static class DrawLineBersenham
     {
-       public static void DrawLine(Bitmap image,int x1,int y1, int x2,int y2)
+        public static void DrawLine(Bitmap image, int x1, int y1, int x2, int y2)
         {
 
             int dx = Abs(x2 - x1);
             int dy = Abs(y2 - y1);
-            int k1 = Sign( x2 - x1);
+            int k1 = Sign(x2 - x1);
             int k2 = Sign(y2 - y1);
             int incrE;
             int incrNE;
@@ -23,30 +23,31 @@ namespace GK1
             int x = x1;
             int y = y1;
             bool change = false;
-            if(dy>dx)
+
+            if (dy > dx)
             {
                 int temp = dy;
                 dy = dx;
                 dx = temp;
                 change = true;
             }
-            
-             d = 2 * dy-dx; 
-             incrE = 2 * dy; 
 
-             incrNE = 2 * (dy-dx);
+            d = 2 * dy - dx;
+            incrE = 2 * dy;
+            incrNE = 2 * (dy - dx);
+
             if (x >= 0 && x < image.Width && y >= 0 && y < image.Height)
-                image.SetPixel(x, y,Color.Black);
-            for(int i=1;i<dx;i++)
+                image.SetPixel(x, y, Color.Black);
+
+            for (int i = 1; i < dx; i++)
             {
-                if(d<0)
+                if (d < 0)
                 {
                     d += incrE;
                     if (change)
                         y += k2;
                     else
                         x += k1;
-                   
                 }
                 else
                 {
@@ -54,12 +55,10 @@ namespace GK1
                     x += k1;
                     y += k2;
                 }
-                if(x>=0&&x<image.Width&&y>=0&&y<image.Height)
+
+                if (x >= 0 && x < image.Width && y >= 0 && y < image.Height)
                     image.SetPixel(x, y, Color.Black);
             }
-
         }
-
-        
     }
 }
