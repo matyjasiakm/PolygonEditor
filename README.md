@@ -1,5 +1,7 @@
 # PolygonEditor
 _Aplikacja stworzona w ramach przedmiotu **Grafika Komputerowa 1**, realizowanego na wydziale **MINI PW**._
+
+![](window.jpg)
 ## Klawiszologia:
 
 Jeśli obszar roboczy jest pusty, to rysowanie odbywa się poprzez klikanie myszką na planszę w celu dodania kolejnych wierzchołków do wielokąta. Rysowanie jest kończone, kiedy znajdują się conajmniej trzy
